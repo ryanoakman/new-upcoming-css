@@ -13,6 +13,8 @@
     <main>
       <section class="dynamin-viewport-units">
         <article>
+          <h2>Dynamic Viewport Units</h2>
+          <h3 class="">About</h3>
           <p>
             Traditional viewport units like VH and VW are great for positioning
             items relative to viewport (what shows on the entire screen). Think:
@@ -21,15 +23,58 @@
           <p>
             However, these units don&apos;t take into account mobile UI elements
             like url and navigation bars. When these bars are active, they shift
-            the VH element. 
+            the VH element.
           </p>
+          <figure>
+            <img src="./images/vh-default.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <h3 class="">What it does</h3>
+          <p>
+            Dynamic viewport units recognize two states of the mobile screen:
+            when the UI bars are active, and when they&apos;re not. These are
+            defined as the SVH and the LVH, respectively.
+          </p>
+          <ul>
+            <li>
+              Small viewport (svh): The size of the viewport when the UI bars
+              are present on the screen
+            </li>
+            <li>
+              Large viewport (lvh): The size of the viewport when the UI bars
+              are not present (like when scrolling)
+            </li>
+          </ul>
+          <figure>
+            <img src="./images/small-and-large-vh.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <p>
+            These are then recognized and used as guides for the Dynamic
+            viewport (DVH) which will automatically adjust itself to be 100% of
+            the viewport whether the UI bars are present or not.
+          </p>
+          <figure>
+            <img src="./images/dvh.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <h3 class="">How to use it</h3>
+          <p><a href="./dvh.html">DVH example</a></p>
+
+          <h3 class="">Why use it</h3>
+          <p></p>
+          <h3 class="">Limitations</h3>
+          <p></p>
         </article>
       </section>
       <section class="object-view-box">
         <article>
           <h2>Object View Box</h2>
           <h3 class="">About</h3>
-          <p>This property allows to zoom in on specific parts of an image and pan around to display different parts of the element.</p>
+          <p>
+            This property allows to zoom in on specific parts of an image and
+            pan around to display different parts of the element.
+          </p>
           <h3 class="">What it does</h3>
           <p></p>
           <h3 class="">Why use it</h3>
@@ -47,6 +92,3 @@
     <footer></footer>
   </body>
 </html>
-
-
-
