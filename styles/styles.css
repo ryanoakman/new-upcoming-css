@@ -1,10 +1,22 @@
+/* Object View Box - Gustavo */
+
+.original-img {
+    width: 40rem;
+}
+
 .crop-img {
-    object-view-box: inset(25% 20% 15% 0%);
+    object-view-box: inset(55% 20% 7% 25%);
 }
 
 .zoom-img {
-    object-view-box: 
-}/* Dynamic Viewport Units Example - Ryan */
+    width: 40rem;
+    object-view-box: inset(15%);
+}
+
+
+
+
+/* Dynamic Viewport Units Example - Ryan */
 
 .hero-img {
   background-image: url("/images/dvh-example.jpg");
@@ -34,3 +46,5 @@ button,
 }
 
 /* End Dynamic Viewport Units Example */
+
+
