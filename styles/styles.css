@@ -14,13 +14,19 @@
   color: #fff;
 }
 
-button {
+.rel-btn {
   position: absolute;
   bottom: 0%;
 }
 
-button,
-.hero-text {
+#switch-unit {
+  position: absolute;
+  top: 20%;
+}
+
+.rel-btn,
+.hero-text,
+#switch-unit {
   width: fit-content;
   left: 0;
   right: 0;
