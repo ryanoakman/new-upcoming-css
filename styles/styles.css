@@ -1,7 +1,7 @@
 /* Dynamic Viewport Units Example - Ryan */
 
 .hero-img {
-  background-image: url("/images/dvh-example.jpg");
+  background-image: url("../images/dvh-example.jpg");
   height: 100vh;
   background-position: center;
   background-size: cover;
