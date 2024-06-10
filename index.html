@@ -21,9 +21,9 @@
             fullscreen video hero.
           </p>
           <p>
-            However, these units don&apos;t take into account mobile UI elements
-            like url and navigation bars. When these bars are active, they shift
-            the VH element.
+            However, these units don't take into account mobile UI elements like
+            url and navigation bars. When these bars are active, they shift the
+            VH element.
           </p>
           <figure>
             <img src="./images/vh-default.png" alt="" />
@@ -32,8 +32,8 @@
           <h3 class="">What it does</h3>
           <p>
             Dynamic viewport units recognize two states of the mobile screen:
-            when the UI bars are active, and when they&apos;re not. These are
-            defined as the SVH and the LVH, respectively.
+            when the UI bars are active, and when they're not. These are defined
+            as the SVH and the LVH, respectively.
           </p>
           <ul>
             <li>
@@ -65,9 +65,40 @@
           </figure>
 
           <h3 class="">Why use it</h3>
-          <p></p>
+          <p>
+            In my research, I came across a story of an estimated $8 million
+            dollar vh mistake by the
+            <a
+              href="https://cloudfour.com/thinks/a-bashful-button-worth-8-million/"
+              >Olive Garden</a
+            >.
+          </p>
+          <p>
+            TL;DR: 100vh was not truly 100% of the viewport height, and the
+            checkout button was off the page.
+          </p>
+          <p>
+            On desktop browsers, the elements are static. This isn't the case on
+            mobile devices. UI elements move as the user scrolls, or interacts.
+            With Safari iOS, the url bar shrinks into itself as you scroll down
+            the page. At any point, you can stop and click the bar to have it
+            expand.
+          </p>
+          <p>DVH accounts for this, and responds appropriately.</p>
           <h3 class="">Limitations</h3>
-          <p></p>
+          <ul>
+            <li>93.2% global adoption.</li>
+            <li>
+              Does not recognize the scrollbar (impacts 100% dynamic viewport
+              width)
+            </li>
+            <li>Does not recognize the keyboard as a UI element.</li>
+            <li>
+              Dynamic may not be truly dynamic, as browsers can decide whether
+              to update the value immediately, or after the interface has
+              changed.
+            </li>
+          </ul>
         </article>
       </section>
       <section class="object-view-box">
