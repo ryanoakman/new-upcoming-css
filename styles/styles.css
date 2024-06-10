@@ -18,11 +18,11 @@
 /* Dynamic Viewport Units Example - Ryan */
 
 .hero-img {
-background-image: url("/images/dvh-example.jpg");
-height: 100vh;
-background-position: center;
-background-size: cover;
-position: relative;
+  background-image: url("/images/dvh-example.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .hero-text {
@@ -32,16 +32,16 @@ color: #fff;
 }
 
 button {
-position: absolute;
-bottom: 0%;
+  position: absolute;
+  bottom: 0%;
 }
 
 button,
 .hero-text {
-width: fit-content;
-left: 0;
-right: 0;
-margin: 0 auto;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 /* End Dynamic Viewport Units Example */

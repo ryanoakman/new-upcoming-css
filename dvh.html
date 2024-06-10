@@ -10,8 +10,9 @@
   <body class="dvh-example">
     <header></header>
     <main>
-      <div class="hero-img">
-        <button>I'm relative to the vh</button>
+      <div class="hero-img" id="hero-img">
+        <button id="switch-unit">Show DVH</button>
+        <button class="rel-btn">I'm relative to the vh</button>
         <div class="hero-text">
           <h1>100vh example</h1>
         </div>
@@ -26,5 +27,20 @@
         >
       </p>
     </footer>
+    <script>
+      const vhSwitchBtn = document.getElementById("switch-unit");
+
+      function switchVhUnits() {
+        const heroImg = document.getElementById("hero-img");
+        if (heroImg.style.height === "100dvh") {
+          heroImg.style.height = "100vh";
+          vhSwitchBtn.textContent = "Show DVH";
+        } else {
+          heroImg.style.height = "100dvh";
+          vhSwitchBtn.textContent = "Show VH";
+        }
+      }
+      vhSwitchBtn.addEventListener("click", switchVhUnits);
+    </script>
   </body>
 </html>
