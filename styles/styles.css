@@ -34,11 +34,10 @@ h3 {
   object-view-box: inset(15%);
 }
 
-
 .how-to-wrapper {
   display: grid;
-grid-template-rows: 60rem 3rem;
-grid-template-columns: 1fr;
+  grid-template-rows: 60rem 3rem;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   height: 65rem;
