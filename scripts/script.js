@@ -43,3 +43,12 @@ btn35.addEventListener("click", function () {
 });
 
 // end of Marc's button text-wrap balance
+
+const ilText = document.querySelector(".il-text-example");
+const ilGrowBtn = document.querySelector(".il-grow");
+
+ilGrowBtn.addEventListener("click", function () {
+  ilText.classList.toggle("grow-text");
+  ilGrowBtn.textContent =
+    ilGrowBtn.textContent === "Grow Text" ? "Shrink Text" : "Grow Text";
+});
