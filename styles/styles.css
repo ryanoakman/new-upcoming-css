@@ -13,8 +13,6 @@
   object-view-box: inset(15%);
 }
 
-
-
 /* Dynamic Viewport Units Example - Ryan */
 
 .hero-img {
@@ -26,9 +24,9 @@
 }
 
 .hero-text {
-position: absolute;
-top: 0%;
-color: #fff;
+  position: absolute;
+  top: 0%;
+  color: #fff;
 }
 
 button {
@@ -45,5 +43,3 @@ button,
 }
 
 /* End Dynamic Viewport Units Example */
-
-
