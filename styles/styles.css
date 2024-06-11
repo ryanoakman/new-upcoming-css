@@ -34,9 +34,19 @@ h3 {
   object-view-box: inset(15%);
 }
 
-.how-to-ovb {
-  width: 41rem;
-  height: 60rem;
+
+.how-to-wrapper {
+  display: grid;
+grid-template-rows: 60rem 3rem;
+grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 65rem;
+  margin: 0 auto;
+}
+
+.how-to-btn {
+  grid-row: 2/3;
 }
 
 /* Dynamic Viewport Units Example - Ryan */
