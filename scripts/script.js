@@ -29,7 +29,6 @@ originalBtn.addEventListener('click', () => {
     cropDisplay.style.display = 'none';
 });
 
-"use strict";
 
 // Marc's example button text-wrap balance
 
