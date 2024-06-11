@@ -104,6 +104,27 @@ h3 {
     #121212 0 0 0 3px,
     transparent 0 0 0 0;
 }
+
+/* Marc's example */
+#tw-balance-text {
+  max-width: 87.5rem;
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.example-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+/* end of Marc's section */
 /* FOOTER ---------- FOOTER */
 
 footer {
