@@ -34,6 +34,11 @@ h3 {
   object-view-box: inset(15%);
 }
 
+.how-to-ovb {
+  width: 41rem;
+  height: 60rem;
+}
+
 /* Dynamic Viewport Units Example - Ryan */
 
 .hero-img {
