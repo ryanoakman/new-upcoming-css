@@ -185,7 +185,9 @@ section {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+  box-shadow:
+    transparent 0 0 0 3px,
+    rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
   color: #121212;
   cursor: pointer;
@@ -201,7 +203,9 @@ section {
   padding: 1rem 1.2rem;
   text-align: center;
   text-decoration: none;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  transition:
+    box-shadow 0.2s,
+    -webkit-box-shadow 0.2s;
   white-space: nowrap;
   border: 0;
   user-select: none;
@@ -210,7 +214,9 @@ section {
 }
 
 .button-35:hover {
-  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  box-shadow:
+    #121212 0 0 0 3px,
+    transparent 0 0 0 0;
 }
 
 /* Marc's example */
@@ -230,6 +236,10 @@ section {
   align-items: center;
   flex-direction: column;
   margin: 2rem 0;
+}
+
+.grow-text::first-letter {
+  initial-letter: 2;
 }
 
 /* end of Marc's section */
