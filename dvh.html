@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Viewport Units</title>
+    <link rel="stylesheet" href="./styles/normalize-fwd.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="dvh-example">
+    <header></header>
+    <main>
+      <div class="hero-img" id="hero-img">
+        <button id="switch-unit">Show DVH</button>
+        <button class="rel-btn">I'm relative to the vh</button>
+        <div class="hero-text">
+          <h1>100vh example</h1>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Photo by
+        <a
+          href="https://www.pexels.com/photo/big-ben-low-angle-photography-77171/"
+          >Amar Saleem</a
+        >
+      </p>
+    </footer>
+    <script>
+      const vhSwitchBtn = document.getElementById("switch-unit");
+
+      function switchVhUnits() {
+        const heroImg = document.getElementById("hero-img");
+        if (heroImg.style.height === "100dvh") {
+          heroImg.style.height = "100vh";
+          vhSwitchBtn.textContent = "Show DVH";
+        } else {
+          heroImg.style.height = "100dvh";
+          vhSwitchBtn.textContent = "Show VH";
+        }
+      }
+      vhSwitchBtn.addEventListener("click", switchVhUnits);
+    </script>
+  </body>
+</html>
