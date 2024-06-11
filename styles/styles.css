@@ -1,23 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
 
-/* Global */
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+
 body {
   font-family: "Roboto", sans-serif;
+  width: 67.5rem;
+  margin: 0 auto;
+  line-height: 1.4rem;
+}
+
+p,
+li {
   font-weight: 400;
   font-style: normal;
   font-size: 1.2rem;
-  width: 67.5rem;
-  margin: 0 auto;
 }
 
 h2 {
   font-size: 2rem;
   text-align: center;
+  border-bottom: 0.5rem solid #fdbc96;
 }
 
 h3 {
   font-size: 1.5rem;
+  text-decoration: underline solid #d3e2d6 0.5rem;
 }
+
+/* Elements
+        --------------------------------------------- */
+ul {
+}
+
+ol {
+}
+
+dl {
+}
+
+figure {
+}
+
+table {
+}
+
+/* Links
+        --------------------------------------------- */
+a {
+}
+
+a:visited {
+}
+
+a:hover {
+}
+
+a:focus {
+}
+
+a:active {
+}
+
+/*--------------------------------------------------------------
+ # Layout
+ --------------------------------------------------------------*/
+
+body {
+  width: clamp(1rem, 90vw, 120rem);
+  margin: 0 auto;
+  background-color: #dbcfc3;
+}
+
+section {
+  background-color: #fcf6e8;
+  padding: 0.5rem;
+  margin: 3rem 0;
+  border: #000 solid 0.125rem;
+  box-shadow: 0.625rem 0.625rem;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
 
 /* Object View Box - Gustavo */
 
@@ -36,12 +122,19 @@ h3 {
 
 .how-to-wrapper {
   display: grid;
-  grid-template-rows: 60rem 3rem;
   grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-  height: 65rem;
   margin: 0 auto;
+  grid-template-rows: 30rem 3rem;
+  height: 35rem;
+}
+
+@media (min-width: 43.75rem) {
+  .how-to-wrapper {
+    grid-template-rows: 60rem 3rem;
+    height: 65rem;
+  }
 }
 
 .how-to-btn {
@@ -49,6 +142,13 @@ h3 {
 }
 
 /* Dynamic Viewport Units Example - Ryan */
+
+.dvh-img {
+  width: clamp(20rem, 100%, 30rem);
+  display: block;
+  margin: 0 auto;
+  /* max-width: 30%; */
+}
 
 .hero-img {
   background-image: url("/images/dvh-example.jpg");
@@ -85,9 +185,7 @@ h3 {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow:
-    transparent 0 0 0 3px,
-    rgba(18, 18, 18, 0.1) 0 6px 20px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
   color: #121212;
   cursor: pointer;
@@ -103,9 +201,7 @@ h3 {
   padding: 1rem 1.2rem;
   text-align: center;
   text-decoration: none;
-  transition:
-    box-shadow 0.2s,
-    -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   white-space: nowrap;
   border: 0;
   user-select: none;
@@ -114,15 +210,13 @@ h3 {
 }
 
 .button-35:hover {
-  box-shadow:
-    #121212 0 0 0 3px,
-    transparent 0 0 0 0;
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
 /* Marc's example */
 #tw-balance-text {
-  max-width: 87.5rem;
-  width: 50rem;
+  /* max-width: 87.5rem;
+  width: 50rem; */
   margin: 0 auto;
 }
 
