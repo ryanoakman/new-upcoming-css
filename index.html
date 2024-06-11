@@ -1,279 +1,282 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize-fwd.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="scripts/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="styles/normalize-fwd.css" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <script defer src="scripts/script.js"></script>
-</head>
-
-<body>
-  <header></header>
-  <main>
-    <section class="dynamin-viewport-units">
-      <article>
-        <h2>Dynamic Viewport Units</h2>
-        <h3 class="">About</h3>
-        <p>
-          Traditional viewport units like VH and VW are great for positioning
-          items relative to viewport (what shows on the entire screen). Think:
-          fullscreen video hero.
-        </p>
-        <p>
-          However, these units don't take into account mobile UI elements like
-          url and navigation bars. When these bars are active, they shift the
-          VH element.
-        </p>
-        <figure>
-          <img src="./images/vh-default.png" alt="" />
-          <figcaption></figcaption>
-        </figure>
-        <h3 class="">What it does</h3>
-        <p>
-          Dynamic viewport units recognize two states of the mobile screen:
-          when the UI bars are active, and when they're not. These are defined
-          as the SVH and the LVH, respectively.
-        </p>
-        <ul>
-          <li>
-            Small viewport (svh): The size of the viewport when the UI bars
-            are present on the screen
-          </li>
-          <li>
-            Large viewport (lvh): The size of the viewport when the UI bars
-            are not present (like when scrolling)
-          </li>
-        </ul>
-        <figure>
-          <img src="./images/small-and-large-vh.png" alt="" />
-          <figcaption></figcaption>
-        </figure>
-        <p>
-          These are then recognized and used as guides for the Dynamic
-          viewport (DVH) which will automatically adjust itself to be 100% of
-          the viewport whether the UI bars are present or not.
-        </p>
-        <figure>
-          <img src="./images/dvh.png" alt="" />
-          <figcaption></figcaption>
-        </figure>
-        <h3 class="">How to use it</h3>
-        <figure>
-          <img src="./images/qr-code-dvh.jpg" alt="" />
-          <figcaption></figcaption>
-        </figure>
-
-        <h3 class="">Why use it</h3>
-        <p>
-          In my research, I came across a story of an estimated $8 million
-          dollar vh mistake by the
-          <a href="https://cloudfour.com/thinks/a-bashful-button-worth-8-million/">Olive Garden</a>.
-        </p>
-        <p>
-          TL;DR: 100vh was not truly 100% of the viewport height, and the
-          checkout button was off the page.
-        </p>
-        <p>
-          On desktop browsers, the elements are static. This isn't the case on
-          mobile devices. UI elements move as the user scrolls, or interacts.
-          With Safari iOS, the url bar shrinks into itself as you scroll down
-          the page. At any point, you can stop and click the bar to have it
-          expand.
-        </p>
-        <p>DVH accounts for this, and responds appropriately.</p>
-        <h3 class="">Limitations</h3>
-        <ul>
-          <li>93.2% global adoption.</li>
-          <li>
-            Does not recognize the scrollbar (impacts 100% dynamic viewport
-            width)
-          </li>
-          <li>Does not recognize the keyboard as a UI element.</li>
-          <li>
-            Dynamic may not be truly dynamic, as browsers can decide whether
-            to update the value immediately, or after the interface has
-            changed.
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="object-view-box">
-      <h2>Object View Box</h2>
-
-      <article class="about-ovb">
-        <h3 class="">About</h3>
-        <p>
-          The release of Chrome 104 introduced a native approach to zoom or
-          pan within the content of an element.
-        </p>
-
-        <h3 class="">What it does</h3>
-        <p>
-          This property allows to zoom in on specific parts of an image and
-          pan around to display different parts of the element.
-        </p>
-      </article>
-
-      <article class="how-to-ovb">
-        <h3 class="">How to use it</h3>
-
-        <div class="how-to-wrapper">
-
-          <figure id="original-display" class="how-to">
-            <img class="original-img" src="images/how-to-use.jpg" alt="" />
-            <figcaption>Original image.</figcaption>
-          </figure>
-        
-        <figure id="crop-display" class="how-to crop-img-wrapper">
-          <img class="crop-img" src="images/how-to-use.jpg" alt="" />
-        <figcaption>Cropped image.</figcaption>
-      <img src="images/crop-code.jpg" alt="" />
-    </figure>
-  
-  <figure id="zomm-display" class="how-to">
-    <img class="zoom-img" src="images/how-to-use.jpg" alt="" />
-  <figcaption>Zoomed image.</figcaption>
-<img src="images/zoom-code.jpg" alt="" />
-</figure>
-
-<div id="how-to-btn">
-  <button id="original-btn">Original image</button>
-<button id="crop-btn">Cropped image</button>
-<button id="zoom-btn">Zoomed image</button>
-</div>
-</div>
-    
-      </article>
-
-      <article class="why-ovb">
-        <h3 class="">Why use it</h3>
-        <p>
-          Before Object View Box, it was necessary to use the image as a
-          background-image and modifying the position and size.
-        </p>
-        <figure class="why">
-          <img src="images/background-img-solution.jpg" alt="" />
-        </figure>
-        <p>
-          Or wrapping the image in a figure and then manipulating both
-          elements.
-        </p>
-        <figure class="why">
-          <img src="images/figure-img-solution.jpg" alt="" />
-        </figure>
-      </article>
-
-      <article>
-        <h3 class="">Limitations</h3>
-        <p>This feature is not supported in all browsers yet. The compatibility with browsers is around 74% (Jun/2024).
-        </p>
-        <img src="images/compatibility.jpg" alt="Browsers compatibility">
-      </article>
-
-    </section>
-    <section class="text-wrap-balance">
-      <article class="tw-text"></article>
-      <h2>Text-Wrap: Balance</h2>
-      <h3>About:</h3>
-      <p>
-        The text-wrap: balance property in CSS is a feature that helps improve
-        the visual appearance of multi-line text, particularly in headings or
-        other short text blocks.
-      </p>
-      <h3>What it does:</h3>
-      <p>
-        This property attempts to balance the text by distributing the words
-        more evenly across the lines. This can result in a more aesthetically
-        pleasing and readable text layout. text-wrap: balance will try to
-        ensure that both lines have a similar length and appearance rather
-        than having one very short line and one very long line.
-      </p>
-      <h3>Why use it:</h3>
-      <p>
-        This property can be particularly useful for headlines, banners, and
-        other text elements where line breaks can significantly impact
-        readability and design.
-      </p>
-      <h3>Limitations:</h3>
-      <p>
-        74.55% total support
-        <a href="caniuse.com/css-text-wrap-balance">(source)</a>. As of now,
-        text-wrap: balance is an experimental feature and may not be fully
-        supported in all browsers.
-      </p>
-      <h3>How to use it:</h3>
-      <p>
-        Simply include “text-wrap: balance” on the appropriate text property
-        within the CSS.
-      </p>
-      <article class="tw-example">
-        <h2>The difference:</h2>
-        <div class="example-wrap">
-          <p id="tw-balance-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-            assumenda dolorem id adipisci vero laudantium, voluptas magnam
-            tempore eaque repudiandae alias reprehenderit debitis in minima
-            sed! Exercitationem est repellendus quas.
+  <body>
+    <header></header>
+    <main>
+      <section class="dynamin-viewport-units">
+        <article>
+          <h2>Dynamic Viewport Units</h2>
+          <h3 class="">About</h3>
+          <p>
+            Traditional viewport units like VH and VW are great for positioning
+            items relative to viewport (what shows on the entire screen). Think:
+            fullscreen video hero.
           </p>
-        </div>
-        <button class="button-35" role="button">Balance Text</button>
-      </article>
-    </section>
-    <section class="initial-letter">
-      <article class="il-text">
-        <h2>Initial Letter</h2>
-        <h3>About</h3>
+          <p>
+            However, these units don't take into account mobile UI elements like
+            url and navigation bars. When these bars are active, they shift the
+            VH element.
+          </p>
+          <figure>
+            <img src="./images/vh-default.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <h3 class="">What it does</h3>
+          <p>
+            Dynamic viewport units recognize two states of the mobile screen:
+            when the UI bars are active, and when they're not. These are defined
+            as the SVH and the LVH, respectively.
+          </p>
+          <ul>
+            <li>
+              Small viewport (svh): The size of the viewport when the UI bars
+              are present on the screen
+            </li>
+            <li>
+              Large viewport (lvh): The size of the viewport when the UI bars
+              are not present (like when scrolling)
+            </li>
+          </ul>
+          <figure>
+            <img src="./images/small-and-large-vh.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <p>
+            These are then recognized and used as guides for the Dynamic
+            viewport (DVH) which will automatically adjust itself to be 100% of
+            the viewport whether the UI bars are present or not.
+          </p>
+          <figure>
+            <img src="./images/dvh.png" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <h3 class="">How to use it</h3>
+          <figure>
+            <img src="./images/qr-code-dvh.jpg" alt="" />
+            <figcaption></figcaption>
+          </figure>
+
+          <h3 class="">Why use it</h3>
+          <p>
+            In my research, I came across a story of an estimated $8 million
+            dollar vh mistake by the
+            <a
+              href="https://cloudfour.com/thinks/a-bashful-button-worth-8-million/"
+              >Olive Garden</a
+            >.
+          </p>
+          <p>
+            TL;DR: 100vh was not truly 100% of the viewport height, and the
+            checkout button was off the page.
+          </p>
+          <p>
+            On desktop browsers, the elements are static. This isn't the case on
+            mobile devices. UI elements move as the user scrolls, or interacts.
+            With Safari iOS, the url bar shrinks into itself as you scroll down
+            the page. At any point, you can stop and click the bar to have it
+            expand.
+          </p>
+          <p>DVH accounts for this, and responds appropriately.</p>
+          <h3 class="">Limitations</h3>
+          <ul>
+            <li>93.2% global adoption.</li>
+            <li>
+              Does not recognize the scrollbar (impacts 100% dynamic viewport
+              width)
+            </li>
+            <li>Does not recognize the keyboard as a UI element.</li>
+            <li>
+              Dynamic may not be truly dynamic, as browsers can decide whether
+              to update the value immediately, or after the interface has
+              changed.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="object-view-box">
+        <h2>Object View Box</h2>
+
+        <article class="about-ovb">
+          <h3 class="">About</h3>
+          <p>
+            The release of Chrome 104 introduced a native approach to zoom or
+            pan within the content of an element.
+          </p>
+
+          <h3 class="">What it does</h3>
+          <p>
+            This property allows to zoom in on specific parts of an image and
+            pan around to display different parts of the element.
+          </p>
+        </article>
+
+        <article class="how-to-ovb">
+          <h3 class="">How to use it</h3>
+
+          <div class="how-to-wrapper">
+            <figure id="original-display" class="how-to">
+              <img class="original-img" src="images/how-to-use.jpg" alt="" />
+              <figcaption>Original image.</figcaption>
+            </figure>
+
+            <figure id="crop-display" class="how-to crop-img-wrapper">
+              <img class="crop-img" src="images/how-to-use.jpg" alt="" />
+              <figcaption>Cropped image.</figcaption>
+              <img src="images/crop-code.jpg" alt="" />
+            </figure>
+
+            <figure id="zomm-display" class="how-to">
+              <img class="zoom-img" src="images/how-to-use.jpg" alt="" />
+              <figcaption>Zoomed image.</figcaption>
+              <img src="images/zoom-code.jpg" alt="" />
+            </figure>
+
+            <div id="how-to-btn">
+              <button id="original-btn">Original image</button>
+              <button id="crop-btn">Cropped image</button>
+              <button id="zoom-btn">Zoomed image</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="why-ovb">
+          <h3 class="">Why use it</h3>
+          <p>
+            Before Object View Box, it was necessary to use the image as a
+            background-image and modifying the position and size.
+          </p>
+          <figure class="why">
+            <img src="images/background-img-solution.jpg" alt="" />
+          </figure>
+          <p>
+            Or wrapping the image in a figure and then manipulating both
+            elements.
+          </p>
+          <figure class="why">
+            <img src="images/figure-img-solution.jpg" alt="" />
+          </figure>
+        </article>
+
+        <article>
+          <h3 class="">Limitations</h3>
+          <p>
+            This feature is not supported in all browsers yet. The compatibility
+            with browsers is around 74% (Jun/2024).
+          </p>
+          <img src="images/compatibility.jpg" alt="Browsers compatibility" />
+        </article>
+      </section>
+      <section class="text-wrap-balance">
+        <article class="tw-text"></article>
+        <h2>Text-Wrap: Balance</h2>
+        <h3>About:</h3>
         <p>
-          The initial-letter property in CSS is a feature that allows you to
-          style the first letter of a block of text. This can be used to
-          create decorative or ornamental effects, or to draw attention to the
-          beginning of a paragraph or section.
+          The text-wrap: balance property in CSS is a feature that helps improve
+          the visual appearance of multi-line text, particularly in headings or
+          other short text blocks.
         </p>
-        <h3>What it does</h3>
+        <h3>What it does:</h3>
         <p>
-          The initial-letter property allows you to specify the size, style,
-          and position of the first letter in a block of text. You can control
-          the size of the initial letter, the font style, and the position of
-          the letter relative to the surrounding text.
+          This property attempts to balance the text by distributing the words
+          more evenly across the lines. This can result in a more aesthetically
+          pleasing and readable text layout. text-wrap: balance will try to
+          ensure that both lines have a similar length and appearance rather
+          than having one very short line and one very long line.
         </p>
         <video controls src="/images/balance-sample.mp4">
           your browser does not support the video tag
         </video>
-        <h3>Why use it</h3>
+        <h3>Why use it:</h3>
         <p>
-          The initial-letter property can be used to create visually
-          interesting and engaging text layouts. By styling the first letter
-          of a paragraph or section, you can draw attention to the beginning
-          of the text and create a more dynamic and visually appealing design.
+          This property can be particularly useful for headlines, banners, and
+          other text elements where line breaks can significantly impact
+          readability and design.
         </p>
-        <h3>Limitations</h3>
+        <h3>Limitations:</h3>
         <p>
-          The initial-letter property is not supported in all browsers. As of
-          now, it is an experimental feature and may not be fully supported in
-          all browsers. You may need to use vendor prefixes or fallback
-          techniques to ensure that your initial-letter styles are displayed
-          correctly in all browsers.
+          74.55% total support
+          <a href="caniuse.com/css-text-wrap-balance">(source)</a>. As of now,
+          text-wrap: balance is an experimental feature and may not be fully
+          supported in all browsers.
         </p>
-        <h3>How to use it</h3>
+        <h3>How to use it:</h3>
         <p>
-          To use the initial-letter property, simply include it in your CSS
-          and specify the desired styles for the first letter of the text. You
-          can control the size, style, and position of the initial letter to
-          create the desired effect.
+          Simply include “text-wrap: balance” on the appropriate text property
+          within the CSS.
         </p>
-        <img src="images/text-wrap-balance-sc.png" alt="example of text-wrap balance code in css" />
-      </article>
-      <article class="il-example"></article>
-    </section>
-  </main>
-  <footer>
-    <p>&copyRyan/Marc/Gustavo 2024</p>
-    <p class="educational">*For educational purposes*</p>
-  </footer>
-</body>
-
+        <img
+          src="images/text-wrap-balance-sc.png"
+          alt="example of text-wrap balance code in css"
+        />
+        <article class="tw-example">
+          <h2>The difference:</h2>
+          <div class="example-wrap">
+            <p id="tw-balance-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              assumenda dolorem id adipisci vero laudantium, voluptas magnam
+              tempore eaque repudiandae alias reprehenderit debitis in minima
+              sed! Exercitationem est repellendus quas.
+            </p>
+          </div>
+          <button class="button-35" role="button">Balance Text</button>
+        </article>
+      </section>
+      <section class="initial-letter">
+        <article class="il-text">
+          <h2>Initial Letter</h2>
+          <h3>About</h3>
+          <p>
+            The initial-letter property in CSS is a feature that allows you to
+            style the first letter of a block of text. This can be used to
+            create decorative or ornamental effects, or to draw attention to the
+            beginning of a paragraph or section.
+          </p>
+          <h3>What it does</h3>
+          <p>
+            The initial-letter property allows you to specify the size, style,
+            and position of the first letter in a block of text. You can control
+            the size of the initial letter, the font style, and the position of
+            the letter relative to the surrounding text.
+          </p>
+          <h3>Why use it</h3>
+          <p>
+            The initial-letter property can be used to create visually
+            interesting and engaging text layouts. By styling the first letter
+            of a paragraph or section, you can draw attention to the beginning
+            of the text and create a more dynamic and visually appealing design.
+          </p>
+          <h3>Limitations</h3>
+          <p>
+            The initial-letter property is not supported in all browsers. As of
+            now, it is an experimental feature and may not be fully supported in
+            all browsers. You may need to use vendor prefixes or fallback
+            techniques to ensure that your initial-letter styles are displayed
+            correctly in all browsers.
+          </p>
+          <h3>How to use it</h3>
+          <p>
+            To use the initial-letter property, simply include it in your CSS
+            and specify the desired styles for the first letter of the text. You
+            can control the size, style, and position of the initial letter to
+            create the desired effect.
+          </p>
+        </article>
+        <article class="il-example"></article>
+      </section>
+    </main>
+    <footer>
+      <p>&copyRyan/Marc/Gustavo 2024</p>
+      <p class="educational">*For educational purposes*</p>
+    </footer>
+  </body>
 </html>
