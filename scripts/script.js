@@ -52,3 +52,62 @@ ilGrowBtn.addEventListener("click", function () {
   ilGrowBtn.textContent =
     ilGrowBtn.textContent === "Grow Text" ? "Shrink Text" : "Grow Text";
 });
+
+// navigation transitions
+
+// element grabs
+const ryanDvu = document.getElementById("ryan-dvu");
+const gusOvb = document.getElementById("gus-ovb");
+const marcTwb = document.getElementById("marc-twb");
+const marcIl = document.getElementById("marc-il");
+
+const ryanSect = document.querySelector(".dynamin-viewport-units");
+const gusSect = document.querySelector(".object-view-box");
+const marcSect = document.querySelector(".text-wrap-balance");
+const marcSect2 = document.querySelector(".initial-letter");
+
+// checks
+ryanDvu.addEventListener("click", function () {
+  console.log("ryan-dvu clicked");
+});
+
+gusOvb.addEventListener("click", function () {
+  console.log("gus-ovb clicked");
+});
+
+marcTwb.addEventListener("click", function () {
+  console.log("marc-twb clicked");
+});
+
+marcIl.addEventListener("click", function () {
+  console.log("marc-il clicked");
+});
+
+// functions
+ryanDvu.addEventListener("click", function () {
+  ryanSect.style.display = "block";
+  gusSect.style.display = "none";
+  marcSect.style.display = "none";
+  marcSect2.style.display = "none";
+});
+
+gusOvb.addEventListener("click", function () {
+  ryanSect.style.display = "none";
+  gusSect.style.display = "block";
+  marcSect.style.display = "none";
+  marcSect2.style.display = "none";
+});
+
+marcTwb.addEventListener("click", function () {
+  ryanSect.style.display = "none";
+  gusSect.style.display = "none";
+  marcSect.style.display = "block";
+  marcSect2.style.display = "none";
+});
+
+marcIl.addEventListener("click", function () {
+  ryanSect.style.display = "none";
+  gusSect.style.display = "none";
+  marcSect.style.display = "none";
+  marcSect2.style.display = "block";
+});
