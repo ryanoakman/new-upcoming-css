@@ -224,7 +224,7 @@ section {
 /* Object View Box - Gustavo */
 
 .original-img {
-  width: 40rem;
+  width: 35rem;
 }
 
 .crop-img {
@@ -232,7 +232,7 @@ section {
 }
 
 .zoom-img {
-  width: 40rem;
+  width: 35rem;
   object-view-box: inset(15%);
 }
 
@@ -240,22 +240,33 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   margin: 0 auto;
-  grid-template-rows: 30rem 3rem;
-  height: 35rem;
+  grid-template-rows: 35rem 3rem;
+  height: auto;
 }
 
-@media (min-width: 43.75rem) {
-  .how-to-wrapper {
-    grid-template-rows: 60rem 3rem;
-    height: 65rem;
-  }
+.code-how-to {
+  width: 30rem;
 }
 
 .how-to-btn {
   grid-row: 2/3;
 }
+
+@media (min-width: 30em) {
+  .how-to-wrapper {
+    grid-template-rows: 49rem 3rem;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .how-to-wrapper {
+    grid-template-rows: 55rem 3rem;
+    height: auto;
+  }
+}
+
 
 /* Dynamic Viewport Units Example - Ryan */
 
