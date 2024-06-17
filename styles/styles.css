@@ -322,10 +322,19 @@ section {
   grid-row: 2 / 3;
 }
 
+.why-img {
+  width: 30rem;
+}
+
+.why {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 29rem) {
   .how-to-wrapper {
     grid-template-rows: auto 5rem;
-    height: 50rem;
+    height: 55rem;
   }
 
   .how-to-btn-wrapper {
@@ -424,3 +433,6 @@ footer p {
   margin-bottom: 0;
   padding: 2rem 2rem 0 2rem;
 }
+
+
+
