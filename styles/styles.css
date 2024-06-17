@@ -282,7 +282,7 @@ section {
 /* Object View Box - Gustavo */
 
 .original-img {
-  width: 40rem;
+  width: 35rem;
 }
 
 .crop-img {
@@ -290,30 +290,57 @@ section {
 }
 
 .zoom-img {
-  width: 40rem;
+  width: 35rem;
   object-view-box: inset(15%);
+}
+
+.code-how-to {
+  width: 25rem;
+}
+
+.how-to-btn {
+  font-size: .8rem;
+  padding: 0 .5rem;
+  margin: .5rem 1rem;
 }
 
 .how-to-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   margin: 0 auto;
-  grid-template-rows: 30rem 3rem;
-  height: 35rem;
+  grid-template-rows: auto 15rem;
+  height: 45rem;
+
 }
 
-.how-to-btn {
-  grid-row: 2/3;
+.how-to-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-row: 2 / 3;
 }
 
-@media (min-width: 43.75rem) {
+@media (min-width: 29rem) {
   .how-to-wrapper {
-    grid-template-rows: 60rem 3rem;
-    height: 65rem;
+    grid-template-rows: auto 5rem;
+    height: 50rem;
+  }
+
+  .how-to-btn-wrapper {
+    display: flex;
+    flex-direction: row;
   }
 }
+
+@media (min-width: 43.75em) {
+  .how-to-wrapper {
+    grid-template-rows: 55rem auto;
+    height: auto;
+  }
+}
+
 
 /*End Object View Box - Gustavo */
 
