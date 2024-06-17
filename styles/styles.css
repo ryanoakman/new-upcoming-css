@@ -1,20 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Generic (CALLED IN ANOTHER FILE)
-	- Normalize
-	- Box sizing
-	- Media width
+- Normalize
+- Box sizing
+- Media width
 # Base
-	- Typography
-	- Elements
-	- Links
+- Typography
+- Elements
+- Links
 # Layouts
 # Components
-	- Header
-	- Main
-	- Footer
+- Header
+- Main
+- Footer
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -23,16 +22,19 @@
 
 /* Typography
 --------------------------------------------- */
-
-.nav-btns li {
-  list-style-type: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
   width: 67.5rem;
   margin: 0 auto;
   line-height: 1.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 0.5rem solid #fdbc96;
 }
 
 p,
@@ -42,15 +44,13 @@ li {
   font-size: 1.2rem;
 }
 
-h2 {
-  font-size: 2rem;
-  text-align: center;
-  border-bottom: 0.5rem solid #fdbc96;
-}
-
 h3 {
   font-size: 1.5rem;
   text-decoration: underline solid #d3e2d6 0.5rem;
+}
+
+.nav-btns li {
+  list-style-type: none;
 }
 
 /* Elements
@@ -111,13 +111,14 @@ section {
 
 /* Header */
 
+.nav-btn {
+  margin-top: 2rem;
+}
+
 .nav-btn button {
   margin: 1rem;
 }
 
-.nav-btn {
-  margin-top: 2rem;
-}
 @media (min-width: 50em) {
   .nav-btn button {
     margin: 0;
@@ -171,11 +172,6 @@ section {
   z-index: -1;
 }
 
-.button-56:hover:after,
-.nav-btn-active.button-56:after {
-  transform: translate(0, 0);
-}
-
 .button-56:active,
 .nav-btn-active.button-56 {
   outline: 0;
@@ -188,6 +184,11 @@ section {
 
 .button-56:hover {
   outline: 0;
+}
+
+.button-56:hover:after,
+.nav-btn-active.button-56:after {
+  transform: translate(0, 0);
 }
 
 @media (min-width: 768px) {
@@ -221,6 +222,63 @@ section {
   display: none;
 }
 
+/* Dynamic Viewport Units Example - Ryan */
+
+.dvh-img {
+  width: clamp(20rem, 100%, 30rem);
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-img {
+  background-image: url("../images/dvh-example.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0%;
+  background-color: #fff;
+}
+
+.rel-div {
+  position: absolute;
+  bottom: 0%;
+  background-color: #fff;
+}
+.btn-container {
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+}
+
+.vh-btns {
+  display: flex;
+  height: 10rem;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.25rem;
+}
+
+.vh-btns button {
+  width: 3rem;
+}
+
+.rel-div,
+.hero-text {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* End Dynamic Viewport Units Example */
+
 /* Object View Box - Gustavo */
 
 .original-img {
@@ -246,6 +304,10 @@ section {
   height: 35rem;
 }
 
+.how-to-btn {
+  grid-row: 2/3;
+}
+
 @media (min-width: 43.75rem) {
   .how-to-wrapper {
     grid-template-rows: 60rem 3rem;
@@ -253,51 +315,7 @@ section {
   }
 }
 
-.how-to-btn {
-  grid-row: 2/3;
-}
-
-/* Dynamic Viewport Units Example - Ryan */
-
-.dvh-img {
-  width: clamp(20rem, 100%, 30rem);
-  display: block;
-  margin: 0 auto;
-  /* max-width: 30%; */
-}
-
-.hero-img {
-  background-image: url("../images/dvh-example.jpg");
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  position: absolute;
-  top: 0%;
-  color: #fff;
-}
-
-.rel-btn {
-  position: absolute;
-  bottom: 0%;
-}
-.rel-btn,
-.hero-text {
-  width: fit-content;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-#switch-unit {
-  position: absolute;
-  top: 30%;
-}
-
-/* End Dynamic Viewport Units Example */
+/*End Object View Box - Gustavo */
 
 /* Marc's button style */
 
@@ -341,8 +359,6 @@ section {
 }
 
 #tw-balance-text {
-  /* max-width: 87.5rem;
-  width: 50rem; */
   margin: 0 auto;
 }
 
@@ -363,6 +379,7 @@ section {
 }
 
 /* end of Marc's section */
+
 /* FOOTER ---------- FOOTER */
 
 footer {
@@ -371,12 +388,12 @@ footer {
   height: 2rem;
 }
 
-footer p {
-  margin-bottom: 0;
-  padding: 2rem 2rem 0 2rem;
-}
-
 .educational {
   font-size: 0.8rem;
   padding: 0 0 1rem 0;
+}
+
+footer p {
+  margin-bottom: 0;
+  padding: 2rem 2rem 0 2rem;
 }
