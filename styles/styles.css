@@ -267,7 +267,7 @@ section {
 }
 
 .hero-img {
-  background-image: url("/images/dvh-example.jpg");
+  background-image: url("../images/dvh-example.jpg");
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -292,6 +292,11 @@ section {
   margin: 0 auto;
 }
 
+#switch-unit {
+  position: absolute;
+  top: 30%;
+}
+
 /* End Dynamic Viewport Units Example */
 
 /* Marc's button style */
@@ -301,9 +306,7 @@ section {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow:
-    transparent 0 0 0 3px,
-    rgba(18, 18, 18, 0.1) 0 6px 20px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
   color: #121212;
   cursor: pointer;
@@ -319,9 +322,7 @@ section {
   padding: 1rem 1.2rem;
   text-align: center;
   text-decoration: none;
-  transition:
-    box-shadow 0.2s,
-    -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   white-space: nowrap;
   border: 0;
   user-select: none;
@@ -330,9 +331,7 @@ section {
 }
 
 .button-35:hover {
-  box-shadow:
-    #121212 0 0 0 3px,
-    transparent 0 0 0 0;
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
 /* Marc's example */
