@@ -263,7 +263,6 @@ section {
   width: clamp(20rem, 100%, 30rem);
   display: block;
   margin: 0 auto;
-  /* max-width: 30%; */
 }
 
 .hero-img {
@@ -292,9 +291,13 @@ section {
   margin: 0 auto;
 }
 
-#switch-unit {
-  position: absolute;
-  top: 30%;
+.vh-btns {
+  display: flex;
+  justify-content: center;
+  height: 100dvh;
+  align-items: center;
+
+  flex-direction: column;
 }
 
 /* End Dynamic Viewport Units Example */

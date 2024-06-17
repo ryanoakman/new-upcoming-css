@@ -6,12 +6,18 @@
     <title>Dynamic Viewport Units</title>
     <link rel="stylesheet" href="./styles/normalize-fwd.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="./scripts/script.js"></script>
   </head>
   <body class="dvh-example">
     <header></header>
     <main>
       <div class="hero-img" id="hero-img">
-        <button id="switch-unit">Show DVH</button>
+        <div class="vh-btns">
+          <button id="lvh-btn">LVH</button>
+          <button id="svh-btn">SVH</button>
+          <button id="dvh-btn">DVH</button>
+          <button id="vh-btn">VH</button>
+        </div>
         <button class="rel-btn">I'm relative to the vh</button>
         <div class="hero-text">
           <h1>100vh example</h1>
@@ -27,20 +33,5 @@
         >
       </p>
     </footer>
-    <script>
-      const vhSwitchBtn = document.getElementById("switch-unit");
-
-      function switchVhUnits() {
-        const heroImg = document.getElementById("hero-img");
-        if (heroImg.style.height === "100dvh") {
-          heroImg.style.height = "100vh";
-          vhSwitchBtn.textContent = "Show DVH";
-        } else {
-          heroImg.style.height = "100dvh";
-          vhSwitchBtn.textContent = "Show VH";
-        }
-      }
-      vhSwitchBtn.addEventListener("click", switchVhUnits);
-    </script>
   </body>
 </html>
