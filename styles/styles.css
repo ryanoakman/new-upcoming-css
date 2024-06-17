@@ -171,11 +171,17 @@ section {
   z-index: -1;
 }
 
-.button-56:hover:after {
+.button-56:hover:after,
+.nav-btn-active.button-56:after {
   transform: translate(0, 0);
 }
 
-.button-56:active {
+.button-56:active,
+.nav-btn-active.button-56 {
+  outline: 0;
+}
+
+.button-56:target {
   background-color: #ffdeda;
   outline: 0;
 }
@@ -187,6 +193,11 @@ section {
 @media (min-width: 768px) {
   .button-56 {
     padding: 0 40px;
+  }
+
+  .button-56:target {
+    background-color: #ffdeda;
+    outline: 0;
   }
 }
 
