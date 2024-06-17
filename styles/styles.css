@@ -325,6 +325,11 @@ section {
 }
 
 /* Marc's example */
+
+.tw-example-img {
+  border: #000 solid 0.125rem;
+}
+
 #tw-balance-text {
   /* max-width: 87.5rem;
   width: 50rem; */
