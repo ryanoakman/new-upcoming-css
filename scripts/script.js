@@ -111,3 +111,38 @@ marcIl.addEventListener("click", function () {
   marcSect.style.display = "none";
   marcSect2.style.display = "block";
 });
+
+// navigation button active state
+
+// ryanDvu
+ryanDvu.addEventListener("click", function () {
+  ryanDvu.classList.add("nav-btn-active");
+  gusOvb.classList.remove("nav-btn-active");
+  marcTwb.classList.remove("nav-btn-active");
+  marcIl.classList.remove("nav-btn-active");
+  console.log("ryan-dvu clicked");
+});
+// gusOvb
+gusOvb.addEventListener("click", function () {
+  ryanDvu.classList.remove("nav-btn-active");
+  gusOvb.classList.add("nav-btn-active");
+  marcTwb.classList.remove("nav-btn-active");
+  marcIl.classList.remove("nav-btn-active");
+  console.log("gus-ovb clicked");
+});
+// marcTwb
+marcTwb.addEventListener("click", function () {
+  ryanDvu.classList.remove("nav-btn-active");
+  gusOvb.classList.remove("nav-btn-active");
+  marcTwb.classList.add("nav-btn-active");
+  marcIl.classList.remove("nav-btn-active");
+  console.log("marc-twb clicked");
+});
+// marcIl
+marcIl.addEventListener("click", function () {
+  ryanDvu.classList.remove("nav-btn-active");
+  gusOvb.classList.remove("nav-btn-active");
+  marcTwb.classList.remove("nav-btn-active");
+  marcIl.classList.add("nav-btn-active");
+  console.log("marc-il clicked");
+});
