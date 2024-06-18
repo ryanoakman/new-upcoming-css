@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <script defer src="./scripts/script.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#000000" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
   </head>
 
   <body>
@@ -149,19 +170,28 @@
             <figure id="crop-display" class="how-to crop-img-wrapper">
               <img class="crop-img" src="images/how-to-use.jpg" alt="" />
               <figcaption>Cropped image.</figcaption>
-              <img src="images/crop-code.jpg" alt="" />
+              <img class="code-how-to" src="images/crop-code.jpg" alt="" />
             </figure>
 
             <figure id="zomm-display" class="how-to">
               <img class="zoom-img" src="images/how-to-use.jpg" alt="" />
               <figcaption>Zoomed image.</figcaption>
-              <img src="images/zoom-code.jpg" alt="" />
+              <img class="code-how-to" src="images/zoom-code.jpg" alt="" />
             </figure>
 
-            <div id="how-to-btn">
-              <button id="original-btn">Original image</button>
-              <button id="crop-btn">Cropped image</button>
-              <button id="zoom-btn">Zoomed image</button>
+            <div class="how-to-btn-wrapper" id="how-to-btn-wrapper">
+              <button
+                class="button-56 how-to-btn"
+                role="button"
+                id="original-btn">
+                Original image
+              </button>
+              <button class="button-56 how-to-btn" role="button" id="crop-btn">
+                Cropped image
+              </button>
+              <button class="button-56 how-to-btn" role="button" id="zoom-btn">
+                Zoomed image
+              </button>
             </div>
           </div>
         </article>
@@ -173,26 +203,37 @@
             background-image and modifying the position and size.
           </p>
           <figure class="why">
-            <img src="images/background-img-solution.jpg" alt="" />
+            <img
+              class="why-img"
+              src="images/background-img-solution.jpg"
+              alt="" />
           </figure>
           <p>
             Or wrapping the image in a figure and then manipulating both
             elements.
           </p>
           <figure class="why">
-            <img src="images/figure-img-solution.jpg" alt="" />
+            <img class="why-img" src="images/figure-img-solution.jpg" alt="" />
           </figure>
+          <p>
+            With Object View Box it is possible to have a cleaner code and
+            straightforward commands.
+          </p>
         </article>
 
         <article>
           <h3 class="">Limitations</h3>
           <p>
             This feature is not supported in all browsers yet. The compatibility
-            with browsers is around 74% (Jun/2024).
+            is around 74% (Jun/2024).
           </p>
-          <img src="images/compatibility.jpg" alt="Browsers compatibility" />
+          <img
+            class="compatibility-img"
+            src="images/compatibility.jpg"
+            alt="Browsers compatibility" />
         </article>
       </section>
+
       <section class="text-wrap-balance">
         <article class="tw-text"></article>
         <h2>Text-Wrap: Balance</h2>
@@ -214,8 +255,7 @@
         <img
           src="/images/text-wrap-balance-800px-breakpoint.png"
           alt="an example of how text-wrap balance works"
-          class="tw-example-img"
-        />
+          class="tw-example-img" />
         <h3>How to use it:</h3>
         <p>
           Simply include <strong>“text-wrap: balance”</strong> on the
@@ -223,8 +263,7 @@
         </p>
         <img
           src="images/text-wrap-balance-sc.png"
-          alt="example of text-wrap balance code in css"
-        />
+          alt="example of text-wrap balance code in css" />
         <h3>Why use it:</h3>
         <p>
           This property can be particularly useful for headlines, banners, and
@@ -234,14 +273,12 @@
         <img
           src="images/balanced-text-wrap-example.png"
           alt="an exmaple of a balanced heading"
-          class="tw-example-img"
-        />
+          class="tw-example-img" />
         <h3>Limitations:</h3>
         <figure>
           <img
             src="images/text-wrap-balance-limit.png"
-            alt="a picture showing the percentage of browsers supporting the css property"
-          />
+            alt="a picture showing the percentage of browsers supporting the css property" />
           <figcaption>
             74.55% total support
             <a href="caniuse.com/css-text-wrap-balance">(source)</a>. As of now,
@@ -277,8 +314,7 @@
             <img
               src="images/initial-letter-example.png"
               alt="a picture showing a bigger initial letter using the initla letter css property"
-              class="tw-example-img"
-            />
+              class="tw-example-img" />
             <figcaption>
               The <strong>initial-letter</strong> property allows you to specify
               the size and position of the first letter in a block of text. You
@@ -315,8 +351,7 @@
             <img
               src="images/initial-text-style.png"
               alt="exmaple of the property intial-letter being used"
-              class="tw-example-img"
-            />
+              class="tw-example-img" />
             <figcaption>
               Styling the initial letter can be used to achieve some fancy
               typographical design methods
@@ -325,8 +360,7 @@
           <h3>Limitations</h3>
           <img
             src="images/initial-letter-limit.png"
-            alt="browser support percentage for the inital letter property"
-          />
+            alt="browser support percentage for the inital letter property" />
           <p>
             The <strong>initial-letter</strong> property is not supported in all
             browsers. As of now, it is an experimental feature and may not be
