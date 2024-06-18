@@ -218,6 +218,18 @@ section {
   display: none;
 }
 
+@media (min-width: 57em) {
+  .text-wrap-balance img {
+    max-width: 50rem;
+  }
+  .img-container-marc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .initial-letter {
   display: none;
 }
@@ -299,17 +311,20 @@ section {
 }
 
 .how-to-btn {
-  font-size: .8rem;
-  padding: 0 .5rem;
-  margin: .5rem 1rem;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 1rem;
   box-shadow: 3px 5px black;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  transition:
+    box-shadow 0.2s,
+    -webkit-box-shadow 0.2s;
 }
 
 .how-to-btn:hover {
-  box-shadow: #121212 0 0 0 .1px, transparent 0 0 0 0;
+  box-shadow:
+    #121212 0 0 0 0.1px,
+    transparent 0 0 0 0;
 }
-
 
 .how-to-wrapper {
   display: grid;
@@ -319,7 +334,6 @@ section {
   margin: 0 auto;
   grid-template-rows: auto 15rem;
   height: 45rem;
-
 }
 
 .how-to-btn-wrapper {
@@ -362,7 +376,6 @@ section {
     height: auto;
   }
 }
-
 
 /*End Object View Box - Gustavo */
 
@@ -415,6 +428,3 @@ footer p {
   margin-bottom: 0;
   padding: 2rem 2rem 0 2rem;
 }
-
-
-
