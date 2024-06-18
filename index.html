@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,22 +10,26 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="favicon/apple-touch-icon.png" />
+      href="favicon/apple-touch-icon.png"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="favicon/favicon-32x32.png" />
+      href="favicon/favicon-32x32.png"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="favicon/favicon-16x16.png" />
+      href="favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <link
       rel="mask-icon"
       href="favicon/safari-pinned-tab.svg"
-      color="#000000" />
+      color="#000000"
+    />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#000000" />
   </head>
@@ -183,7 +187,8 @@
               <button
                 class="button-56 how-to-btn"
                 role="button"
-                id="original-btn">
+                id="original-btn"
+              >
                 Original image
               </button>
               <button class="button-56 how-to-btn" role="button" id="crop-btn">
@@ -206,7 +211,8 @@
             <img
               class="why-img"
               src="images/background-img-solution.jpg"
-              alt="" />
+              alt=""
+            />
           </figure>
           <p>
             Or wrapping the image in a figure and then manipulating both
@@ -230,7 +236,8 @@
           <img
             class="compatibility-img"
             src="images/compatibility.jpg"
-            alt="Browsers compatibility" />
+            alt="Browsers compatibility"
+          />
         </article>
       </section>
 
@@ -252,33 +259,43 @@
           have a similar length and appearance rather than having one very short
           line and one very long line.
         </p>
-        <img
-          src="/images/text-wrap-balance-800px-breakpoint.png"
-          alt="an example of how text-wrap balance works"
-          class="tw-example-img" />
+        <div class="img-container-marc">
+          <img
+            src="/images/text-wrap-balance-800px-breakpoint.png"
+            alt="an example of how text-wrap balance works"
+            class="tw-example-img"
+          />
+        </div>
         <h3>How to use it:</h3>
         <p>
           Simply include <strong>“text-wrap: balance”</strong> on the
           appropriate text property within the CSS.
         </p>
-        <img
-          src="images/text-wrap-balance-sc.png"
-          alt="example of text-wrap balance code in css" />
+        <div class="img-container-marc">
+          <img
+            src="images/text-wrap-balance-sc.png"
+            alt="example of text-wrap balance code in css"
+          />
+        </div>
         <h3>Why use it:</h3>
         <p>
           This property can be particularly useful for headlines, banners, and
           other text elements where line breaks can significantly impact
           readability and design.
         </p>
-        <img
-          src="images/balanced-text-wrap-example.png"
-          alt="an exmaple of a balanced heading"
-          class="tw-example-img" />
+        <div class="img-container-marc">
+          <img
+            src="images/balanced-text-wrap-example.png"
+            alt="an exmaple of a balanced heading"
+            class="tw-example-img"
+          />
+        </div>
         <h3>Limitations:</h3>
-        <figure>
+        <figure class="img-container-marc">
           <img
             src="images/text-wrap-balance-limit.png"
-            alt="a picture showing the percentage of browsers supporting the css property" />
+            alt="a picture showing the percentage of browsers supporting the css property"
+          />
           <figcaption>
             74.55% total support
             <a href="caniuse.com/css-text-wrap-balance">(source)</a>. As of now,
@@ -296,7 +313,9 @@
               sed! Exercitationem est repellendus quas.
             </p>
           </div>
-          <button class="button-35" role="button">Balance Text</button>
+          <button class="button-56 button-35" role="button">
+            Balance Text
+          </button>
         </article>
       </section>
       <section class="initial-letter">
@@ -310,11 +329,12 @@
             attention to the beginning of a paragraph or section.
           </p>
           <h3>What it does</h3>
-          <figure>
+          <figure class="img-container-marc">
             <img
               src="images/initial-letter-example.png"
               alt="a picture showing a bigger initial letter using the initla letter css property"
-              class="tw-example-img" />
+              class="tw-example-img"
+            />
             <figcaption>
               The <strong>initial-letter</strong> property allows you to specify
               the size and position of the first letter in a block of text. You
@@ -327,7 +347,9 @@
             To use the <strong>initial-letter</strong>, simply follow these
             steps:
           </p>
-          <img src="images/initial-letter-code.png" alt="" />
+          <div class="img-container-marc">
+            <img src="images/initial-letter-code-no-comments.png" alt="" />
+          </div>
           <ol>
             <li>Use the pseudo class "::first-letter".</li>
             <li>
@@ -347,20 +369,24 @@
             beginning of the text and create a more dynamic and visually
             appealing design.
           </p>
-          <figure>
+          <figure class="img-container-marc">
             <img
               src="images/initial-text-style.png"
               alt="exmaple of the property intial-letter being used"
-              class="tw-example-img" />
+              class="tw-example-img"
+            />
             <figcaption>
               Styling the initial letter can be used to achieve some fancy
               typographical design methods
             </figcaption>
           </figure>
           <h3>Limitations</h3>
-          <img
-            src="images/initial-letter-limit.png"
-            alt="browser support percentage for the inital letter property" />
+          <div class="img-container-marc">
+            <img
+              src="images/initial-letter-limit.png"
+              alt="browser support percentage for the inital letter property"
+            />
+          </div>
           <p>
             The <strong>initial-letter</strong> property is not supported in all
             browsers. As of now, it is an experimental feature and may not be
@@ -377,7 +403,7 @@
             harum. Explicabo maiores voluptas excepturi repudiandae error sit
             minus saepe earum at eius.
           </p>
-          <button class="il-grow">Grow Text</button>
+          <button class="button-56 il-grow">Grow Text</button>
         </article>
       </section>
     </main>
