@@ -111,6 +111,34 @@ section {
 
 /* Header */
 
+.icon-img {
+  width: 2rem;
+}
+
+.title h1{
+  font-size: 1.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: .5rem .5rem;
+}
+
+@media (min-width: 29.75em) {
+  .title h1{
+    font-size: 2.2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: .5rem .5rem;
+  }
+}
+
+.title {
+  display: flex;
+}
+
 .nav-btn {
   margin-top: 2rem;
 }
