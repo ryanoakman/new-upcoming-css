@@ -1,32 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>New CSS Technologies</title>
     <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script defer src="scripts/script.js"></script>
+    <script defer src="./scripts/script.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#dbcfc3" />
+    <meta name="theme-color" content="#dbcfc3" />
   </head>
 
   <body>
     <header>
-      <header>
-        <nav class="nav-btn">
-          <button class="button-56" role="button" id="ryan-dvu">
-            Dynamic Viewport Units
-          </button>
-          <button class="button-56" role="button" id="gus-ovb">
-            Object Viewbox
-          </button>
-          <button class="button-56" role="button" id="marc-twb">
-            Text-Wrap: Balance
-          </button>
-          <button class="button-56" role="button" id="marc-il">
-            Initial Letter
-          </button>
-        </nav>
-      </header>
+      <section class="title">
+        <img class="icon-img" src="images/icon.jpg" alt="" />
+        <h1>New CSS Technologies</h1>
+      </section>
+      <nav class="nav-btn">
+        <button class="button-56" role="button" id="ryan-dvu">
+          Dynamic Viewport Units
+        </button>
+        <button class="button-56" role="button" id="gus-ovb">
+          Object Viewbox
+        </button>
+        <button class="button-56" role="button" id="marc-twb">
+          Text-Wrap: Balance
+        </button>
+        <button class="button-56" role="button" id="marc-il">
+          Initial Letter
+        </button>
+      </nav>
     </header>
     <main>
       <section class="dynamin-viewport-units">
@@ -149,19 +176,29 @@
             <figure id="crop-display" class="how-to crop-img-wrapper">
               <img class="crop-img" src="images/how-to-use.jpg" alt="" />
               <figcaption>Cropped image.</figcaption>
-              <img src="images/crop-code.jpg" alt="" />
+              <img class="code-how-to" src="images/crop-code.jpg" alt="" />
             </figure>
 
             <figure id="zomm-display" class="how-to">
               <img class="zoom-img" src="images/how-to-use.jpg" alt="" />
               <figcaption>Zoomed image.</figcaption>
-              <img src="images/zoom-code.jpg" alt="" />
+              <img class="code-how-to" src="images/zoom-code.jpg" alt="" />
             </figure>
 
-            <div id="how-to-btn">
-              <button id="original-btn">Original image</button>
-              <button id="crop-btn">Cropped image</button>
-              <button id="zoom-btn">Zoomed image</button>
+            <div class="how-to-btn-wrapper" id="how-to-btn-wrapper">
+              <button
+                class="button-56 how-to-btn"
+                role="button"
+                id="original-btn"
+              >
+                Original image
+              </button>
+              <button class="button-56 how-to-btn" role="button" id="crop-btn">
+                Cropped image
+              </button>
+              <button class="button-56 how-to-btn" role="button" id="zoom-btn">
+                Zoomed image
+              </button>
             </div>
           </div>
         </article>
@@ -173,26 +210,39 @@
             background-image and modifying the position and size.
           </p>
           <figure class="why">
-            <img src="images/background-img-solution.jpg" alt="" />
+            <img
+              class="why-img"
+              src="images/background-img-solution.jpg"
+              alt=""
+            />
           </figure>
           <p>
             Or wrapping the image in a figure and then manipulating both
             elements.
           </p>
           <figure class="why">
-            <img src="images/figure-img-solution.jpg" alt="" />
+            <img class="why-img" src="images/figure-img-solution.jpg" alt="" />
           </figure>
+          <p>
+            With Object View Box it is possible to have a cleaner code and
+            straightforward commands.
+          </p>
         </article>
 
         <article>
           <h3 class="">Limitations</h3>
           <p>
             This feature is not supported in all browsers yet. The compatibility
-            with browsers is around 74% (Jun/2024).
+            is around 74% (Jun/2024).
           </p>
-          <img src="images/compatibility.jpg" alt="Browsers compatibility" />
+          <img
+            class="compatibility-img"
+            src="images/compatibility.jpg"
+            alt="Browsers compatibility"
+          />
         </article>
       </section>
+
       <section class="text-wrap-balance">
         <article class="tw-text"></article>
         <h2>Text-Wrap: Balance</h2>
@@ -211,51 +261,65 @@
           have a similar length and appearance rather than having one very short
           line and one very long line.
         </p>
-        <img
-          src="/images/text-wrap-balance-800px-breakpoint.png"
-          alt="an example of how text-wrap balance works"
-          class="tw-example-img" />
+        <div class="img-container-marc">
+          <img
+            src="images/text-wrap-balance-800px-breakpoint.png"
+            alt="an example of how text-wrap balance works"
+            class="tw-example-img"
+          />
+        </div>
         <h3>How to use it:</h3>
         <p>
           Simply include <strong>“text-wrap: balance”</strong> on the
           appropriate text property within the CSS.
         </p>
-        <img
-          src="images/text-wrap-balance-sc.png"
-          alt="example of text-wrap balance code in css" />
+        <div class="img-container-marc">
+          <img
+            src="images/text-wrap-balance-sc.png"
+            alt="example of text-wrap balance code in css"
+          />
+        </div>
         <h3>Why use it:</h3>
         <p>
           This property can be particularly useful for headlines, banners, and
           other text elements where line breaks can significantly impact
           readability and design.
         </p>
-        <img
-          src="images/balanced-text-wrap-example.png"
-          alt="an exmaple of a balanced heading"
-          class="tw-example-img" />
+        <div class="img-container-marc">
+          <img
+            src="images/balanced-text-wrap-example.png"
+            alt="an exmaple of a balanced heading"
+            class="tw-example-img"
+          />
+        </div>
         <h3>Limitations:</h3>
-        <figure>
+        <figure class="img-container-marc">
           <img
             src="images/text-wrap-balance-limit.png"
-            alt="a picture showing the percentage of browsers supporting the css property" />
+            alt="a picture showing the percentage of browsers supporting the css property"
+          />
           <figcaption>
             74.55% total support
             <a href="caniuse.com/css-text-wrap-balance">(source)</a>. As of now,
             text-wrap: balance is an experimental feature and may not be fully
-            supported in all browsers.
+            supported in all browsers. The feature only works on lines of text
+            containing 6 lines or less.
           </figcaption>
         </figure>
         <article class="tw-example">
           <h3>The Difference:</h3>
           <div class="example-wrap">
             <p id="tw-balance-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              assumenda dolorem id adipisci vero laudantium, voluptas magnam
-              tempore eaque repudiandae alias reprehenderit debitis in minima
-              sed! Exercitationem est repellendus quas.
+              This is an example of a paragraph of text that has been styled
+              using the <strong>text-wrap: balance</strong> property. The text
+              has been balanced to ensure that both lines have a similar length
+              and appearance, resulting in a more aesthetically pleasing and
+              readable text layout.
             </p>
           </div>
-          <button class="button-35" role="button">Balance Text</button>
+          <button class="button-56 button-35 how-to-btn" role="button">
+            Balance Text
+          </button>
         </article>
       </section>
       <section class="initial-letter">
@@ -269,11 +333,12 @@
             attention to the beginning of a paragraph or section.
           </p>
           <h3>What it does</h3>
-          <figure>
+          <figure class="img-container-marc">
             <img
               src="images/initial-letter-example.png"
               alt="a picture showing a bigger initial letter using the initla letter css property"
-              class="tw-example-img" />
+              class="tw-example-img"
+            />
             <figcaption>
               The <strong>initial-letter</strong> property allows you to specify
               the size and position of the first letter in a block of text. You
@@ -286,7 +351,9 @@
             To use the <strong>initial-letter</strong>, simply follow these
             steps:
           </p>
-          <img src="images/initial-letter-code.png" alt="" />
+          <div class="img-container-marc" id="il-code">
+            <img src="images/initial-letter-code-no-comments.png" alt="" />
+          </div>
           <ol>
             <li>Use the pseudo class "::first-letter".</li>
             <li>
@@ -306,41 +373,46 @@
             beginning of the text and create a more dynamic and visually
             appealing design.
           </p>
-          <figure>
+          <figure class="img-container-marc">
             <img
               src="images/initial-text-style.png"
               alt="exmaple of the property intial-letter being used"
-              class="tw-example-img" />
+              class="tw-example-img"
+            />
             <figcaption>
               Styling the initial letter can be used to achieve some fancy
               typographical design methods
             </figcaption>
           </figure>
           <h3>Limitations</h3>
-          <img
-            src="images/initial-letter-limit.png"
-            alt="browser support percentage for the inital letter property" />
+          <div class="img-container-marc">
+            <img
+              src="images/initial-letter-limit.png"
+              alt="browser support percentage for the inital letter property"
+            />
+          </div>
           <p>
             The <strong>initial-letter</strong> property is not supported in all
-            browsers. As of now, it is an experimental feature and may not be
-            fully supported in all browsers. You may need to use vendor prefixes
-            or fallback techniques to ensure that your initial-letter styles are
-            displayed correctly in all browsers.
+            browsers. Currently, it is only supported by 90.13% of all browsers.
+            You may need to use vendor prefixes or fallback techniques to ensure
+            that your initial-letter styles are displayed correctly in all
+            browsers.
           </p>
         </article>
         <article class="il-example">
           <h3>Example</h3>
           <p class="il-text-example">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum
-            necessitatibus optio dolorem accusantium doloremque reiciendis sed
-            harum. Explicabo maiores voluptas excepturi repudiandae error sit
-            minus saepe earum at eius.
+            This is an example of a paragraph of text that has been styled using
+            the <strong>initial-letter</strong> property. The first letter of
+            the paragraph has been enlarged and positioned to create a visually
+            interesting effect.
           </p>
-          <button class="il-grow">Grow Text</button>
+          <button class="button-56 il-grow how-to-btn">Grow Text</button>
         </article>
       </section>
     </main>
     <!-- Staging Fix -->
+    <!-- Commit Reverted -->
     <footer>
       <p>&copyRyan/Marc/Gustavo 2024</p>
       <p class="educational">*For educational purposes*</p>
